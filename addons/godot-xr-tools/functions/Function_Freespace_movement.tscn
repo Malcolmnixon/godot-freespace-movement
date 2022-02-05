@@ -9,7 +9,6 @@ radius = 0.3
 script = ExtResource( 1 )
 left_pickup = null
 right_pickup = null
-velocity_averages = 5
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
 

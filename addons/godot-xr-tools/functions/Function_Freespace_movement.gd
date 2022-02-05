@@ -10,9 +10,6 @@ enum GrabState {
 	RELEASED	# Released (transition to NONE after physics)
 }
 
-## Movement provider order
-export var order := 15
-
 ## Pickup function for the left hand
 export (NodePath) var left_pickup = null
 

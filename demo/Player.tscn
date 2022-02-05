@@ -25,4 +25,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.15 )
 [node name="Function_Freespace_movement" parent="." index="4" instance=ExtResource( 7 )]
 left_pickup = NodePath("../LeftHandController/Function_Pickup")
 right_pickup = NodePath("../RightHandController/Function_Pickup")
-velocity_averages = 10
