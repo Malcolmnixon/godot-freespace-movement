@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://demo/obstacle/ClimbBox.tscn" type="PackedScene" id=1]
+
+[node name="ClimbGroup" type="Spatial"]
+
+[node name="ClimbBox" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="ClimbBox2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, -2, 0 )
+
+[node name="ClimbBox3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -2, 0, 0 )
+
+[node name="ClimbBox4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 2, 0, 0 )

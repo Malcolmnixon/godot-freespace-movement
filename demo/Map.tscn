@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://demo/obstacle/ClimbBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://demo/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/opengameart.org/space-skyboxes/panorama_image.png" type="Texture" id=3]
+[ext_resource path="res://demo/Room.tscn" type="PackedScene" id=4]
+[ext_resource path="res://demo/obstacle/ClimbGroup.tscn" type="PackedScene" id=5]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 3 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_sky_contribution = 0.8
+
+[node name="Map" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000332411, -1.101, -0.301 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.965926, -0.12941, 0.224144, 0, 0.866025, 0.5, -0.258819, -0.482963, 0.836516, 0, 16, 0 )
+
+[node name="Room" parent="." instance=ExtResource( 4 )]
+
+[node name="ClimbGroup" parent="." instance=ExtResource( 5 )]
+
+[node name="ClimbGroup2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 8, 0, 8 )
+
+[node name="ClimbGroup3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -8, 0, -8 )
+
+[node name="ClimbGroup4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8, 0, 8 )
+
+[node name="ClimbGroup5" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 8, 0, -8 )
+
+[node name="ClimbBox" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, 8 )
+
+[node name="ClimbBox2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -8 )
+
+[node name="ClimbBox3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 8, 0, 0 )
+
+[node name="ClimbBox4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 1, -8, 0, 0 )

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://demo/structure/Girder.tres" type="Material" id=1]
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_climbable.gd" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.5
+
+[sub_resource type="SphereMesh" id=2]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+
+[node name="Joint" type="StaticBody"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )

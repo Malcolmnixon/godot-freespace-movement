@@ -1,0 +1,430 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_climbable.gd" type="Script" id=1]
+[ext_resource path="res://demo/structure/Joint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://demo/structure/Window.tscn" type="PackedScene" id=3]
+[ext_resource path="res://demo/structure/Girder.tscn" type="PackedScene" id=4]
+
+[node name="Room" type="Spatial"]
+
+[node name="Windows" type="Spatial" parent="."]
+
+[node name="Window" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window2" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window16" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Window17" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Window18" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -8, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Window3" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Window19" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Window20" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -8, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Window21" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 8, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Window4" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window13" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 12, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Window14" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 12, 0, -8 )
+script = ExtResource( 1 )
+
+[node name="Window15" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 12, 0, 8 )
+script = ExtResource( 1 )
+
+[node name="Window5" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window6" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Window7" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window10" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Window11" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, -8 )
+script = ExtResource( 1 )
+
+[node name="Window12" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 8 )
+script = ExtResource( 1 )
+
+[node name="Window8" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window9" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Window22" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window23" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window24" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Window25" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 8, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window26" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 8, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window27" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 8, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Window28" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -8, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Window29" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -8, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Window30" type="StaticBody" parent="Windows" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -8, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girders" type="Spatial" parent="."]
+
+[node name="Girder" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder2" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder3" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder4" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder5" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder6" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder7" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder8" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder9" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder10" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder11" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder12" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder13" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder14" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder15" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder16" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder17" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder18" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder19" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder20" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder21" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder22" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder23" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder24" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder25" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder26" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder27" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder28" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 0 )
+script = ExtResource( 1 )
+
+[node name="Girder29" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 8 )
+script = ExtResource( 1 )
+
+[node name="Girder30" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -8 )
+script = ExtResource( 1 )
+
+[node name="Girder31" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder32" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, 4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder33" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder34" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder35" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, 4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder36" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder37" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder38" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, 4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder39" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder40" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, 4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder41" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, 4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder42" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder43" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, -4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder44" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, -4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder45" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, -4, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder46" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, -4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder47" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, -4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder48" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, -4, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder49" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, -4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder50" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, -4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder51" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, -4, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder52" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, -4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder53" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.53674e-07, -4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder54" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, -4, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder55" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 12, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder56" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 4, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder57" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -4, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder58" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -12, 0, -12 )
+script = ExtResource( 1 )
+
+[node name="Girder59" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -12, 0, -4 )
+script = ExtResource( 1 )
+
+[node name="Girder60" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -12, 0, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder61" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -12, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder62" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, -4, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder63" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 4, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder64" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 12, 0, 12 )
+script = ExtResource( 1 )
+
+[node name="Girder65" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 12, 0, 4 )
+script = ExtResource( 1 )
+
+[node name="Girder66" type="StaticBody" parent="Girders" instance=ExtResource( 4 )]
+transform = Transform( 1.91069e-15, 1, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1, 0, -4.37114e-08, 12, 0, -4 )
+script = ExtResource( 1 )
+
+[node name="Joints" type="Spatial" parent="."]
+
+[node name="Joint" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, -12 )
+script = ExtResource( 1 )
+
+[node name="Joint2" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -4, -12 )
+script = ExtResource( 1 )
+
+[node name="Joint3" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -12 )
+script = ExtResource( 1 )
+
+[node name="Joint4" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, -12 )
+script = ExtResource( 1 )
+
+[node name="Joint5" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 12 )
+script = ExtResource( 1 )
+
+[node name="Joint6" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -4, 12 )
+script = ExtResource( 1 )
+
+[node name="Joint7" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 12 )
+script = ExtResource( 1 )
+
+[node name="Joint8" type="StaticBody" parent="Joints" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -4, 12 )
+script = ExtResource( 1 )
