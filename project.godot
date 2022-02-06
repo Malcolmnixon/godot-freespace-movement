@@ -74,6 +74,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/godot-xr-tools/misc/Velocity_Averager.gd"
 }, {
+"base": "Reference",
+"class": "VelocityAveragerLinear",
+"language": "GDScript",
+"path": "res://addons/godot-xr-tools/misc/Velocity_Averager_Linear.gd"
+}, {
 "base": "CanvasLayer",
 "class": "VirtualKeyboard2D",
 "language": "GDScript",
@@ -113,6 +118,7 @@ _global_script_class_icons={
 "Object_climbable": "",
 "PlayerBody": "",
 "VelocityAverager": "",
+"VelocityAveragerLinear": "",
 "VirtualKeyboard2D": "",
 "WindArea": "",
 "XRToolsInteractableArea": "",

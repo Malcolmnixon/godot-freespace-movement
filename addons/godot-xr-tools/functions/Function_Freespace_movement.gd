@@ -36,7 +36,7 @@ var _grabber : Function_Pickup = null
 
 # Velocity averaging fields
 var _velocity := Vector3.ZERO
-onready var _velocity_averager := VelocityAverager.new(velocity_averages)
+onready var _velocity_averager := VelocityAveragerLinear.new(velocity_averages)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -107,7 +107,7 @@ func _handle_grabbing(delta: float):
 		return
 
 	# Calculate the instantaneous velocity
-	_velocity_averager.add_position(delta, _camera.global_transform.origin)
+	_velocity_averager.add_transform(delta, _camera.global_transform)
 
 	# Get the left transform
 	var grabbed := _climbable.get_grab_transform(_grabber)
