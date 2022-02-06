@@ -35,10 +35,8 @@ var _climbable : Object_climbable = null
 var _grabber : Function_Pickup = null
 
 # Velocity averaging fields
-var _old_position := Vector3.ZERO
-var _distances = Array()
-var _deltas = Array()
 var _velocity := Vector3.ZERO
+onready var _velocity_averager := VelocityAverager.new(velocity_averages)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -97,11 +95,6 @@ func _physics_process(delta: float):
 	_origin.global_transform.origin += _body.global_transform.origin - pos_before
 	
 func _handle_grabbing(delta: float):
-	# Calculate the instantaneous velocity
-	var position := _camera.global_transform.origin;
-	var instantaneous_velocity = position - _old_position
-	_old_position = position
-	
 	# Skip if not grabbing
 	if _grab_state == GrabState.NONE:
 		return
@@ -109,41 +102,18 @@ func _handle_grabbing(delta: float):
 	# Handle release physics
 	if _grab_state == GrabState.RELEASED:
 		_grab_state = GrabState.NONE
-		_velocity = _average_velocity() * fling_multiplier
-		_distances.clear()
-		_deltas.clear()
+		_velocity = _velocity_averager.velocity() * fling_multiplier
+		_velocity_averager.clear()
 		return
+
+	# Calculate the instantaneous velocity
+	_velocity_averager.add_position(delta, _camera.global_transform.origin)
 
 	# Get the left transform
 	var grabbed := _climbable.get_grab_transform(_grabber)
 	var gripper := _grabber.global_transform
 	var transform := grabbed * gripper.inverse()
 	_origin.global_transform = (transform * _origin.global_transform).orthonormalized()
-	_update_velocity(delta, instantaneous_velocity)
-
-# Update player velocity averaging data
-func _update_velocity(delta: float, distance: Vector3):
-	# Add delta and distance to averaging arrays
-	_distances.push_back(distance)
-	_deltas.push_back(delta)
-	if _distances.size() > velocity_averages:
-		_distances.pop_front()
-		_deltas.pop_front()
-
-# Calculate average player velocity
-func _average_velocity() -> Vector3:
-	# Calculate the total time
-	var total_time := 0.0
-	for dt in _deltas:
-		total_time += dt
-
-	# Calculate the total distance
-	var total_distance := Vector3(0.0, 0.0, 0.0)
-	for dd in _distances:
-		total_distance += dd
-
-	# Return the average
-	return total_distance / total_time
 
 # Get our ARVR origin node, we should be in a branch of this
 func get_arvr_origin() -> ARVROrigin:
